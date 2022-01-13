@@ -19,6 +19,13 @@ on:
     branches: [ develop ]
   schedule:
     - cron: '21 4 * * 2'
+  workflow_dispatch:
+    inputs:
+      staging:
+        description: check code quality
+        required: false
+        default: 'no'
+
 
 jobs:
   analyze:
